@@ -3,6 +3,7 @@ import Service_1 from "../../assets/img/our_service_1.png";
 import Service_2 from "../../assets/img/our_service_2.png";
 import Service_3 from "../../assets/img/our_service_3.png";
 import Service_4 from "../../assets/img/our_service_4.png";
+import { NavLink } from "react-router-dom";
 
 const Home = (props) => {
   const Works = [
@@ -161,6 +162,57 @@ const Home = (props) => {
                       <p>next</p>
                       <h4>Our Story</h4>
                       <i className="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-top py-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <section className="container">
+                <div className="row">
+                  <div className="col">
+                    <div className="">
+                      <NavLink
+                        to="/"
+                        className="text-decoration-none text-secondary me-4">
+                        Home
+                      </NavLink>
+                      <NavLink
+                        to="/story"
+                        className="text-decoration-none text-secondary me-4">
+                        Story
+                      </NavLink>
+                      <NavLink
+                        to="/services"
+                        className="text-decoration-none text-secondary me-4">
+                        Works
+                      </NavLink>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="text-center">
+                      <h5 className="fw-bold">RepoHub</h5>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="text-end">
+                      <NavLink
+                        to="/services"
+                        className="text-decoration-none text-secondary">
+                        Careers
+                      </NavLink>
+                      <NavLink
+                        to="/contact"
+                        className="text-decoration-none text-secondary ms-4">
+                        Contact Us
+                      </NavLink>
                     </div>
                   </div>
                 </div>
