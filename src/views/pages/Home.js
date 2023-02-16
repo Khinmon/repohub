@@ -148,6 +148,27 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+
+      {/* Story */}
+      <div className="">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <section className="container">
+                <div className="col">
+                  <div className="my-5 py-5">
+                    <div className="text-center py-5 my-5">
+                      <p>next</p>
+                      <h4>Our Story</h4>
+                      <i className="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
