@@ -4,6 +4,8 @@ import Service_2 from "../../assets/img/our_service_2.png";
 import Service_3 from "../../assets/img/our_service_3.png";
 import Service_4 from "../../assets/img/our_service_4.png";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 const Home = (props) => {
   const Works = [
@@ -22,6 +24,17 @@ const Home = (props) => {
     { id: 4, src: Service_4, title: "Research & Analysis" },
   ];
 
+  useEffect(() => {
+    ScrollReveal().reveal(".headline", {
+      origin: "bottom",
+      distance: "40px",
+      duration: 1200,
+      //reset: true,
+      interval: 200,
+      scale: 0.9,
+      viewFactor: 0.1,
+    });
+  }, []);
   return (
     <div>
       {/* Home Section */}
@@ -33,15 +46,16 @@ const Home = (props) => {
               <div className="row">
                 <div className="col-10">
                   <div className="my-5 py-5">
-                    <h3 className="fw-light">Digital Agency</h3>
-                    <h3 className="mb-5">
+                    <h3 className="fw-light headline">Digital Agency</h3>
+                    <h3 className="mb-5 headline">
                       We developer complex interface systems for Web, Mobile &
                       Ar
                     </h3>
                     <img
                       src={Home_img_1}
-                      className="img-fluid"
+                      className="img-fluid headline"
                       alt="Home img"
+                      headline
                     />
                   </div>
                 </div>
@@ -60,14 +74,14 @@ const Home = (props) => {
                 <div className="row">
                   <div className="col-12">
                     <div className="my-5 py-5">
-                      <h3 className="text-center mb-5">
+                      <h3 className="text-center mb-5 headline">
                         Our Work Select Projects
                       </h3>
 
                       <div className="row row-cols-1 row-cols-md-2 g-5">
                         {Works.map((work) => {
                           return (
-                            <div key={work.id} className="col">
+                            <div key={work.id} className="col headline">
                               <div className="card">
                                 <img
                                   src={work.src}
@@ -102,10 +116,10 @@ const Home = (props) => {
               <section className="container">
                 <div className="row">
                   <div className="col-lg-6">
-                    <h4>Our Services</h4>
+                    <h4 className="headline">Our Services</h4>
                   </div>
                   <div className="col-lg-6">
-                    <p>
+                    <p className="headline">
                       As a strategic partner, we create a working product with a
                       thoughtful and large-scale architecture. We launch,
                       support and development.
@@ -115,7 +129,7 @@ const Home = (props) => {
                 <div className="row mt-4 g-4">
                   {Services.map((service) => {
                     return (
-                      <div key={service.id} className="col">
+                      <div key={service.id} className="col headline">
                         <div className="card text-center py-3 py-lg-5">
                           <div className="mb-1 mb-lg-3">
                             <img
@@ -131,7 +145,7 @@ const Home = (props) => {
                       </div>
                     );
                   })}
-                  <div className="col-12">
+                  <div className="col-12 headline">
                     <div className="float-end my-5">
                       <div className="d-flex justify-content-center align-content-center">
                         <span className="me-3">Explore More</span>
@@ -156,7 +170,7 @@ const Home = (props) => {
               <section className="container">
                 <div className="col">
                   <div className="my-lg-5 py-lg-5">
-                    <div className="text-center py-5 my-5">
+                    <div className="text-center py-5 my-5 headline">
                       <p>next</p>
                       <h4>Our Story</h4>
                       <i className="fa-solid fa-arrow-right-long"></i>
@@ -175,7 +189,7 @@ const Home = (props) => {
             <div className="col-lg-10">
               <section className="container">
                 <div className="row">
-                  <div className="col col-lg-auto col-md-10">
+                  <div className="col col-lg-auto col-md-10 headline">
                     <div className="small mb-4 mb-lg-0">
                       <NavLink
                         to="/"
@@ -205,12 +219,12 @@ const Home = (props) => {
                       </NavLink>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col headline">
                     <div className="text-center text-md-end">
                       <h5 className="fw-bold">RepoHub</h5>
                     </div>
                   </div>
-                  <div className="col d-none d-lg-block">
+                  <div className="col d-none d-lg-block headline">
                     <div className="text-end small">
                       <NavLink
                         to="/services"
