@@ -64,7 +64,7 @@ const Home = (props) => {
                         Our Work Select Projects
                       </h3>
 
-                      <div className="row row-cols-2 g-5">
+                      <div className="row row-cols-1 row-cols-md-2 g-5">
                         {Works.map((work) => {
                           return (
                             <div key={work.id} className="col">
@@ -112,22 +112,20 @@ const Home = (props) => {
                     </p>
                   </div>
                 </div>
-                <div className="row mt-4">
+                <div className="row mt-4 g-4">
                   {Services.map((service) => {
                     return (
-                      <div className="col">
-                        <div key={service.id} className="col">
-                          <div className="card text-center py-5">
-                            <div className="mb-3">
-                              <img
-                                src={service.src}
-                                className="w-50"
-                                alt="Home img"
-                              />
-                            </div>
-                            <div className="card-body">
-                              <h6 className="card-title">{service.title}</h6>
-                            </div>
+                      <div key={service.id} className="col">
+                        <div className="card text-center py-3 py-lg-5">
+                          <div className="mb-1 mb-lg-3">
+                            <img
+                              src={service.src}
+                              className="w-50"
+                              alt="Home img"
+                            />
+                          </div>
+                          <div className="card-body">
+                            <h6 className="card-title">{service.title}</h6>
                           </div>
                         </div>
                       </div>
@@ -138,7 +136,7 @@ const Home = (props) => {
                       <div className="d-flex justify-content-center align-content-center">
                         <span className="me-3">Explore More</span>
                         <div>
-                          <i class="fa-solid fa-angle-right fa-1x"></i>
+                          <i className="fa-solid fa-angle-right fa-1x"></i>
                         </div>
                       </div>
                     </div>
@@ -157,7 +155,7 @@ const Home = (props) => {
             <div className="col-lg-10">
               <section className="container">
                 <div className="col">
-                  <div className="my-5 py-5">
+                  <div className="my-lg-5 py-lg-5">
                     <div className="text-center py-5 my-5">
                       <p>next</p>
                       <h4>Our Story</h4>
@@ -177,8 +175,8 @@ const Home = (props) => {
             <div className="col-lg-10">
               <section className="container">
                 <div className="row">
-                  <div className="col">
-                    <div className="">
+                  <div className="col col-lg-auto col-md-10">
+                    <div className="small mb-4 mb-lg-0">
                       <NavLink
                         to="/"
                         className="text-decoration-none text-secondary me-4">
@@ -194,15 +192,26 @@ const Home = (props) => {
                         className="text-decoration-none text-secondary me-4">
                         Works
                       </NavLink>
+
+                      <NavLink
+                        to="/services"
+                        className="text-decoration-none text-secondary d-lg-none">
+                        Careers
+                      </NavLink>
+                      <NavLink
+                        to="/contact"
+                        className="text-decoration-none text-secondary d-lg-none ms-4">
+                        Contact Us
+                      </NavLink>
                     </div>
                   </div>
                   <div className="col">
-                    <div className="text-center">
+                    <div className="text-center text-md-end">
                       <h5 className="fw-bold">RepoHub</h5>
                     </div>
                   </div>
-                  <div className="col">
-                    <div className="text-end">
+                  <div className="col d-none d-lg-block">
+                    <div className="text-end small">
                       <NavLink
                         to="/services"
                         className="text-decoration-none text-secondary">
