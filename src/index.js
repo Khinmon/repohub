@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter } from "react-router-dom";
 import "./Cus.scss";
+import "colormyar/css/pdf.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

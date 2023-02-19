@@ -53,7 +53,7 @@ const Home = (props) => {
                     </h3>
                     <img
                       src={Home_img_1}
-                      className="img-fluid headline"
+                      className="img-fluid headline pdf-rounded-xl"
                       alt="Home img"
                       headline
                     />
@@ -82,7 +82,7 @@ const Home = (props) => {
                         {Works.map((work) => {
                           return (
                             <div key={work.id} className="col headline">
-                              <div className="card">
+                              <div className="card pdf-rounded-xl overflow-hidden border-0 shadow-xl shadow-blue-50">
                                 <img
                                   src={work.src}
                                   className="img-fluid"
@@ -130,7 +130,7 @@ const Home = (props) => {
                   {Services.map((service) => {
                     return (
                       <div key={service.id} className="col headline">
-                        <div className="card text-center py-3 py-lg-5">
+                        <div className="card text-center py-3 py-lg-5 border-0 shadow-xl shadow-blue-50">
                           <div className="mb-1 mb-lg-3">
                             <img
                               src={service.src}
