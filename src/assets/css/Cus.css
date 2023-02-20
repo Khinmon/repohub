@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "Walone_thin";
+  font-weight: auto;
+  src: url("../fonts/Z06-Walone/Z06-Walone\ Thin.ttf");
+}
+
+@font-face {
+  font-family: "Walone_bold";
+  font-weight: bold;
+  src: url("../fonts/Z06-Walone/Z06-Walone\ Bold.ttf");
+}
+
+@font-face {
+  font-family: "Walone_regular";
+  font-weight: normal;
+  src: url("../fonts/Z06-Walone/Z06-Walone\ Regular.ttf");
+}
+
+* {
+  font-family: Walone_regular;
+}
+
+.Walone-Bold {
+  font-family: Walone_bold;
+}
+
 .menu-icon {
   width: 50px;
   height: 10px;

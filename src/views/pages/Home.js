@@ -3,9 +3,12 @@ import Service_1 from "../../assets/img/our_service_1.png";
 import Service_2 from "../../assets/img/our_service_2.png";
 import Service_3 from "../../assets/img/our_service_3.png";
 import Service_4 from "../../assets/img/our_service_4.png";
-import { NavLink } from "react-router-dom";
+import Logo from "../../repohub_logo.png";
+import Img from "../../assets/img/img.png";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { Helmet } from "react-helmet";
 
 const Home = (props) => {
   const Works = [
@@ -35,10 +38,32 @@ const Home = (props) => {
       viewFactor: 0.1,
     });
   }, []);
+
   return (
     <div>
-      {/* Home Section */}
+      <Helmet>
+        <title>RepoHub</title>
+        <meta name="title" content="RepoHub" />
+        <meta name="description" content="This is my learning react pj." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:title" content="RepoHub" />
+        <meta
+          property="og:description"
+          content="This is my learning react pj."
+        />
+        <meta property="og:image" content={Img} />
 
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="RepoHub" />
+        <meta
+          property="twitter:description"
+          content="This is my learning react pj."
+        />
+        <meta property="twitter:image" content={Img} />
+      </Helmet>
+      {/* Home Section */}
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
@@ -47,7 +72,7 @@ const Home = (props) => {
                 <div className="col-10">
                   <div className="my-5 py-5">
                     <h3 className="fw-light headline">Digital Agency</h3>
-                    <h3 className="mb-5 headline">
+                    <h3 className="Walone-Bold mb-5 headline">
                       We developer complex interface systems for Web, Mobile &
                       Ar
                     </h3>
@@ -89,10 +114,12 @@ const Home = (props) => {
                                   alt="Home img"
                                 />
                                 <div className="card-body">
-                                  <h5 className="card-title">
+                                  <h5 className="card-title Walone-Bold">
                                     {work.subtitle}
                                   </h5>
-                                  <p className="card-text">{work.desc}</p>
+                                  <p className="card-text text-secondary">
+                                    {work.desc}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -116,10 +143,10 @@ const Home = (props) => {
               <section className="container">
                 <div className="row">
                   <div className="col-lg-6">
-                    <h4 className="headline">Our Services</h4>
+                    <h4 className="headline Walone-Bold">Our Services</h4>
                   </div>
                   <div className="col-lg-6">
-                    <p className="headline">
+                    <p className="text-secondary headline">
                       As a strategic partner, we create a working product with a
                       thoughtful and large-scale architecture. We launch,
                       support and development.
@@ -170,11 +197,15 @@ const Home = (props) => {
               <section className="container">
                 <div className="col">
                   <div className="my-lg-5 py-lg-5">
-                    <div className="text-center py-5 my-5 headline">
-                      <p>next</p>
-                      <h4>Our Story</h4>
-                      <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
+                    <Link
+                      to="/story"
+                      className="text-decoration-none text-secondary">
+                      <div className="text-center py-5 my-5 headline">
+                        <p className="text-uppercase">next</p>
+                        <h4 className="text-black">Our Story</h4>
+                        <i className="fa-solid fa-arrow-right-long"></i>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </section>
