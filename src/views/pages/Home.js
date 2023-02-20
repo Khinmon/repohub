@@ -80,7 +80,6 @@ const Home = (props) => {
                       src={Home_img_1}
                       className="img-fluid headline pdf-rounded-xl"
                       alt="Home img"
-                      headline
                     />
                   </div>
                 </div>
